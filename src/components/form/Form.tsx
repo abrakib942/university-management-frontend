@@ -1,3 +1,5 @@
+"use client";
+
 import { ReactElement, ReactNode } from "react";
 import { useForm, FormProvider, SubmitHandler } from "react-hook-form";
 
@@ -10,7 +12,7 @@ type FormProps = {
   submitHandler: SubmitHandler<any>;
 } & FormConfig;
 
-const Form = ({ children, submitHandler, defaultValues }: FormProps) => {
+const CustomForm = ({ children, submitHandler, defaultValues }: FormProps) => {
   const formConfig: FormConfig = {};
 
   if (!!defaultValues) formConfig["defaultValues"] = defaultValues;
@@ -32,4 +34,4 @@ const Form = ({ children, submitHandler, defaultValues }: FormProps) => {
   );
 };
 
-export default Form;
+export default CustomForm;
