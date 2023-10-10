@@ -4,9 +4,8 @@ import UMBreadCrumb from "@/components/ui/UMBreadCrumb";
 import { getUserInfo } from "@/services/auth.service";
 import { Button } from "antd";
 import Link from "next/link";
-import React from "react";
 
-const ManageStudentPage = () => {
+const ManageStudentsPage = () => {
   const { role } = getUserInfo() as any;
   return (
     <div>
@@ -17,13 +16,13 @@ const ManageStudentPage = () => {
             link: `/${role}`,
           },
         ]}
-      />{" "}
-      <h1>Manage Students</h1>
+      />
+      <h1>Student List</h1>
       <Link href="/super_admin/manage-student/create">
-        <Button>Create</Button>
+        <Button type="primary">Create</Button>
       </Link>
     </div>
   );
 };
 
-export default ManageStudentPage;
+export default ManageStudentsPage;
