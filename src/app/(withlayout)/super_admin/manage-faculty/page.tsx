@@ -10,13 +10,13 @@ const ManageFacultyPage = () => {
       <UMBreadCrumb
         items={[
           {
-            label: `admin`,
-            link: `/admin`,
+            label: `super_admin`,
+            link: `/super_admin`,
           },
         ]}
       />{" "}
       <h1>Manage Students</h1>
-      <Link href="/admin/manage-faculty/create">
+      <Link href="/super_admin/manage-faculty/create">
         <Button type="primary">Create</Button>
       </Link>
     </div>

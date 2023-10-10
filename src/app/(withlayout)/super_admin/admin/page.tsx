@@ -1,8 +1,8 @@
+import ActionBar from "@/components/ui/ActionBar";
 import UMBreadCrumb from "@/components/ui/UMBreadCrumb";
 import { Button } from "antd";
 import Link from "next/link";
-
-const ManageDepartmentPage = () => {
+const ManageAdminPage = () => {
   return (
     <div>
       <UMBreadCrumb
@@ -13,12 +13,14 @@ const ManageDepartmentPage = () => {
           },
         ]}
       />
-      <h1>Department List</h1>
-      <Link href="/super_admin/department/create">
-        <Button type="primary">Create</Button>
-      </Link>
+
+      <ActionBar title="Admin List">
+        <Link href="/super_admin/admin/create">
+          <Button type="primary">Create Admin</Button>
+        </Link>
+      </ActionBar>
     </div>
   );
 };
 
-export default ManageDepartmentPage;
+export default ManageAdminPage;
